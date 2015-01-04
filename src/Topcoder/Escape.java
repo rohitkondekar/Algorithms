@@ -3,6 +3,8 @@ package Topcoder;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
+//http://community.topcoder.com/tc?module=ProblemDetail&rd=4371&pm=1170
+
 public class Escape {
 		
 	private static final byte HARMFUL = 1;
