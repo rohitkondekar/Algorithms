@@ -2,6 +2,7 @@ package HackerRank;
 
 import java.util.Arrays;
 
+//wrong
 public class InsaneDFS {
 	
 	Parser parse = new Parser(System.in);
@@ -89,65 +90,65 @@ public class InsaneDFS {
 	}
 
 }
-
-class Parser {
-	final private int BUFFER_SIZE = 1 << 17;
-	final private DataInputStream din;
-	final private byte[] buffer;
-	private int bufferPointer, bytesRead;
-
-	public Parser(InputStream in) {
-		din = new DataInputStream(in);
-		buffer = new byte[BUFFER_SIZE];
-		bufferPointer = bytesRead = 0;
-	}
-
-	private byte read() throws Exception {
-		if (bufferPointer == bytesRead) {
-			fillBuffer();
-		}
-		return buffer[bufferPointer++];
-	}
-
-	private void fillBuffer() throws Exception {
-		bytesRead = din.read(buffer, bufferPointer = 0, BUFFER_SIZE);
-		if (bytesRead == -1) {
-			buffer[0] = -1;
-		}
-	}
-
-	public String nextString() throws Exception {
-		StringBuilder sb = new StringBuilder("");
-		byte c = read();
-		while (c <= ' ') {
-			c = read();
-		}
-		do {
-			sb.append((char) c);
-			c = read();
-		} while (c > ' ');
-		return sb.toString();
-	}
-
-	public char nextChar() throws Exception {
-		byte c = read();
-		while (c <= ' ') {
-			c = read();
-		}
-		return (char) c;
-	}
-
-	public int nextInt() throws Exception {
-		int ret = 0;
-		byte c = read();
-		while (c <= ' ') {
-			c = read();
-		}
-		do {
-			ret = ret * 10 + c - '0';
-			c = read();
-		} while (c > ' ');
-		return ret;
-	}
-}
+//
+//class Parser {
+//	final private int BUFFER_SIZE = 1 << 17;
+//	final private DataInputStream din;
+//	final private byte[] buffer;
+//	private int bufferPointer, bytesRead;
+//
+//	public Parser(InputStream in) {
+//		din = new DataInputStream(in);
+//		buffer = new byte[BUFFER_SIZE];
+//		bufferPointer = bytesRead = 0;
+//	}
+//
+//	private byte read() throws Exception {
+//		if (bufferPointer == bytesRead) {
+//			fillBuffer();
+//		}
+//		return buffer[bufferPointer++];
+//	}
+//
+//	private void fillBuffer() throws Exception {
+//		bytesRead = din.read(buffer, bufferPointer = 0, BUFFER_SIZE);
+//		if (bytesRead == -1) {
+//			buffer[0] = -1;
+//		}
+//	}
+//
+//	public String nextString() throws Exception {
+//		StringBuilder sb = new StringBuilder("");
+//		byte c = read();
+//		while (c <= ' ') {
+//			c = read();
+//		}
+//		do {
+//			sb.append((char) c);
+//			c = read();
+//		} while (c > ' ');
+//		return sb.toString();
+//	}
+//
+//	public char nextChar() throws Exception {
+//		byte c = read();
+//		while (c <= ' ') {
+//			c = read();
+//		}
+//		return (char) c;
+//	}
+//
+//	public int nextInt() throws Exception {
+//		int ret = 0;
+//		byte c = read();
+//		while (c <= ' ') {
+//			c = read();
+//		}
+//		do {
+//			ret = ret * 10 + c - '0';
+//			c = read();
+//		} while (c > ' ');
+//		return ret;
+//	}
+//}
 
