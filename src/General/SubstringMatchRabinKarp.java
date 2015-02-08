@@ -103,6 +103,10 @@ public class SubstringMatchRabinKarp {
 	public static void main(String[] args) {
 		SubstringMatchRabinKarp sm = new SubstringMatchRabinKarp("abracadabra");
 		System.out.println(sm.search("abacadabrabracabracadabrabrabracad"));
+		
+		sm = new SubstringMatchRabinKarp("rab");
+		System.out.println(sm.search("abacadabrabracabracadabrabrabracad"));
+
 
 	}
 
